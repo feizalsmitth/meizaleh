@@ -6,6 +6,7 @@ import {
   Line,
   PieChart,
   Pie,
+  Cell,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -280,7 +281,7 @@ const AIDashboard = () => {
                   label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
                 >
                   {teamDistributionData.map((entry, index) => (
-                    <cell key={`cell-${index}`} fill={['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'][index % 5]} />
+                    <Cell key={`cell-${index}`} fill={['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'][index % 5]} />
                   ))}
                 </Pie>
                 <Tooltip />
